@@ -89,8 +89,7 @@ public class Employee {
         return  "id: " + ID
                 + "\nФИО: " + FULL_NAME
                 + "\nОтдел: " + department
-                + "\nЗарплата: " + salary
-                + "\n";
+                + "\nЗарплата: " + salary;
     }
 
     @Override

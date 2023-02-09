@@ -44,7 +44,7 @@ public class EmployeesService {
         return employeeMax;
     }
 
-    public static double calculateAverageSalary(Employee[] array) {
+    public static double calculateAverageSalary() {
         return calculatePayrollCosts(Main.employees) / Employee.getCounter();
     }
 

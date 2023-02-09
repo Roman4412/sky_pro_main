@@ -13,21 +13,22 @@ public class Main {
         ryslan.setDepartment(5);
         System.out.println(ryslan);
         System.out.println("Employee.getCounter() = " + Employee.getCounter());
-
+        System.out.println(ryslan.getId());
+        System.out.println(ryslan.getDepartment());
         EmployeesService.printFullNameAll(employees);
         System.out.println();
         EmployeesService.getEmployeesInfo(employees);
         System.out.println();
         System.out.println("Сумма затрат в месяц: " + EmployeesService.calculatePayrollCosts(employees));
-        System.out.println("Среднее значение зарплат: " + EmployeesService.calculateAverageSalary(employees));
+        System.out.println("Среднее значение зарплат: " + EmployeesService.calculateAverageSalary());
         System.out.println("Сотрудник с максимальной зарплатой: \n" + EmployeesService.findMaxSalaryEmployee(employees));
         System.out.println("Сотрудник с минимальной зарплатой: \n" + EmployeesService.findMinSalaryEmployee(employees));
         print();
     }
 
     public static void print() {
-        for (int i = 0; i < employees.length; i++) {
-            System.out.println(employees[i]);
+        for (Employee employee : employees) {
+            System.out.println(employee);
         }
     }
 
