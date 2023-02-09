@@ -54,5 +54,21 @@ public class EmployeesService {
                 System.out.println(employee.getFullName());
         }
     }
-
+    public static void assignToEmployeesArray(Employee object) {
+        for (int i = 0; i < Main.employees.length; i++) {
+            if (Main.employees[i] != null && object.equals(Main.employees[i])) {
+                System.out.println("Такой сотрудник уже существует");
+                Employee.counter--;
+                return;
+            }
+            if (Main.employees[i] == null) {
+                Main.employees[i] = object;
+                return;
+            }
+        }
+        throw new ArrayIndexOutOfBoundsException("Массив переполнен");
+    }
+    public static void print(Employee[] array) {
+        for (Employee employee : array) System.out.println(employee);
+    }
 }
