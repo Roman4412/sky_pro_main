@@ -14,7 +14,6 @@ public class Employee {
         FULL_NAME = fullName;
         this.department = setDepartment(department);
         this.salary = setSalary(salary);
-        EmployeesService.assignToEmployeesArray(this);
     }
 
 

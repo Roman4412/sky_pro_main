@@ -8,7 +8,12 @@ public class Main {
         Employee olga = new Employee("Ольга Фёдоровна Берггольц", 1, 123_000);
         Employee ryslan = new Employee("Руслан Габидуллин", 2, 300_000);
         Employee ryslan2 = new Employee("Руслан Габидуллин", 2, 300_000);
-        Employee anna3 = new Employee("Анна Леонидовна Меньшова", 1, 6_000);
+        EmployeesService.assignToEmployeesArray(anna);
+        EmployeesService.assignToEmployeesArray(evgeniy);
+        EmployeesService.assignToEmployeesArray(olga);
+        EmployeesService.assignToEmployeesArray(ryslan);
+        EmployeesService.assignToEmployeesArray(ryslan2);
+
         System.out.println(ryslan);
         ryslan.setSalary(400_000);
         ryslan.setDepartment(5);
@@ -25,7 +30,7 @@ public class Main {
         System.out.println("Сотрудник с максимальной зарплатой: \n" + EmployeesService.findMaxSalaryEmployee(employees));
         System.out.println("Сотрудник с минимальной зарплатой: \n" + EmployeesService.findMinSalaryEmployee(employees));
         System.out.println("************");
-        EmployeesService.assignToEmployeesArray(ryslan2);
+
         System.out.println(Employee.getCounter());
         System.out.println(ryslan2);
         System.out.println("*******************");
