@@ -3,24 +3,19 @@ package pro.sky.java.course1.course_work;
 public class Main {
     public static Employee[] employees = new Employee[10];
     public static void main (String[] args) {
-        Employee anna = new Employee("Анна Леонидовна Большова", 1, 6_000);
-        Employee evgeniy = new Employee("Евгений Александрович Евстегнеев", 3, 202_000);
-        Employee olga = new Employee("Ольга Фёдоровна Берггольц", 1, 123_000);
-        Employee ryslan = new Employee("Руслан Габидуллин", 2, 300_000);
-        Employee ryslan2 = new Employee("Руслан Габидуллин", 2, 300_000);
-        EmployeesService.assignToEmployeesArray(anna);
-        EmployeesService.assignToEmployeesArray(evgeniy);
-        EmployeesService.assignToEmployeesArray(olga);
-        EmployeesService.assignToEmployeesArray(ryslan);
-        EmployeesService.assignToEmployeesArray(ryslan2);
+        employees[0] = new Employee("Анна Леонидовна Большова", 1, 6_000);
+        employees[1] = new Employee("Евгений Александрович Евстегнеев", 3, 202_000);
+        employees[2] = new Employee("Ольга Фёдоровна Берггольц", 1, 123_000);
+        employees[3] = new Employee("Руслан Габидуллин", 2, 300_000);
+        employees[4] = new Employee("Руслан Габидуллин", 2, 300_000);
 
-        System.out.println(ryslan);
-        ryslan.setSalary(400_000);
-        ryslan.setDepartment(5);
-        System.out.println(ryslan);
+        System.out.println(employees[0]);
+        employees[3].setSalary(400_000);
+        employees[3].setDepartment(5);
+        System.out.println(employees[3]);
         System.out.println("Employee.getCounter() = " + Employee.getCounter());
-        System.out.println(ryslan.getId());
-        System.out.println(ryslan.getDepartment());
+        System.out.println(employees[3].getId());
+        System.out.println(employees[3].getDepartment());
         EmployeesService.printFullNameAll(employees);
         System.out.println();
         EmployeesService.getEmployeesInfo(employees);
@@ -32,7 +27,7 @@ public class Main {
         System.out.println("************");
 
         System.out.println(Employee.getCounter());
-        System.out.println(ryslan2);
+        System.out.println(employees[4]);
         System.out.println("*******************");
         EmployeesService.print(employees);
         System.out.println("*******************");
